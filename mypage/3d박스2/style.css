@@ -1,0 +1,69 @@
+#verticalFrame3{
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px;
+    
+}
+
+@keyframes bingle{
+    /*to는  즉 0 to 360이다*/
+    to{
+        transform: rotatey(360deg);
+    }
+}
+
+.carousel{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotatex(-20deg);
+    
+    /* animation: bingle 10s infinite linear; */
+}
+
+.panel{
+    background-color: ivory;
+    opacity: 0.5;
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: 100px;
+    /* animation: bingle 10s infinite linear; */
+    
+}
+
+.panel:nth-child(1) {
+    transform: rotateY(0deg)  
+               translateZ(240px);   
+}
+.panel:nth-child(2) {
+    transform: rotateY(45deg)
+               translateZ(240px);
+}
+.panel:nth-child(3) {
+    transform: rotateY(90deg)
+               translateZ(240px); 
+}
+.panel:nth-child(4) {
+    transform: rotateY(135deg)
+               translateZ(240px);
+}
+.panel:nth-child(5) {
+    transform: rotateY(180deg)
+               translateZ(240px);
+}
+.panel:nth-child(6) {
+    transform: rotateY(225deg)
+               translateZ(240px);
+}
+.panel:nth-child(7) {
+    transform: rotateY(270deg)
+               translateZ(240px);
+}
+.panel:nth-child(8) {
+    transform: rotateY(315deg)
+               translateZ(240px);
+}

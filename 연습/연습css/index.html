@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      hr{
+        
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+}
+body{
+    background-color: yellow;
+}
+    </style>
+</head>
+<body>
+    <hr>
+    <button id="buttons" style="width: 100px; height: 100px; background-color: coral;">aaa</button>
+    
+    <script>
+
+const buttons = document.getElementById('buttons');
+buttons.addEventListener('click', clink);
+
+function clink(e) {
+    console.log("나옴");
+    console.log("나옴2");
+    window.open('address','window_name','width=430,height=500,location=no,status=no,scrollbars=yes, toolbar=no, menubar=no');
+
+}
+    </script>
+</body>
+</html>

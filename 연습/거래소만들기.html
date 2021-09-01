@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>거래소만들기.html</title>
+    <link rel="stylesheet" href="./거래소만들기.css">
+    <script src="https://kit.fontawesome.com/2f9d1cdbe4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone|Material+Icons+Sharp|Material+Icons+outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <div class="all">
+        <div class="top">
+            <div class="level" style="font-size: 30px;">
+                <span id="fifty">50</span>
+                <div class="progress" id= "redbar">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        650/1021
+                    </div>
+                </div>
+                <div class="progress" id="bluebar">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        129/171
+                    </div>
+                </div>
+                <span id="statebar"><img src="./거래소이미지/상태바.JPG" alt="상태바"></span>
+            </div>
+            <div class="posion"><img src="./거래소이미지/포션.JPG" alt="포션바" width="400px"></div>
+            <div class="market"><i class="fas fa-balance-scale"></i> 거래소</div>
+            <div class="esc"><img src="./거래소이미지/종료.JPG" alt="종료버튼" width="40px"></div>
+        </div>
+        <div class="searchbar">
+            <div class="searchbutton" data-value="1"><span class="material-icons-sharp arrow">
+                search
+                </span> 검색</div>
+            <div class="searchbutton" data-value="1"><span class="material-icons-sharp arrow">
+                local_offer
+                </span> 판매등록</div>
+            <div class="searchbutton" data-value="1"><i class="fas fa-coins arrow" style="font-size: 23px;"></i>> 정산</div>
+            <div class="searchbutton" data-value="1"><span class="material-icons-sharp arrow">
+                receipt_long
+                </span> 정산내역</div>
+        </div>
+        <div class="center">
+            <div class="left">
+                <div style="font-size: 18px;"><i class="fas fa-cog"></i> 검색조건</div>
+                <div class="checkbar" id="allitem" data-value="1">전 체<span class="arrow" style="margin-left: 40px; margin-right: 10px;">▶</span></div>
+                <div class="checkbar" id="weapon" data-value="1">무 기<span class="arrow" style="margin-left: 40px; margin-right: 10px;">▶</span></div>
+                <div class="checkbar" id="armor" data-value="1">방어구<span class="arrow" style="margin-left: 33px; margin-right: 10px;">▶</span></div>
+                <div class="checkbar" id="accessories" data-value="1">장신구<span class="arrow" style="margin-left: 33px; margin-right: 10px;">▶</span></div>
+                <div class="checkbar" id="skillbook" data-value="1">스킬북<span class="arrow" style="margin-left: 33px; margin-right: 10px;">▶</span></div>
+                <div class="checkbar" id="things" data-value="1">소모품<span class="arrow" style="margin-left: 33px; margin-right: 10px;">▶</span></div>
+            </div>
+            <div class="right">
+                <div class ="infobar">
+                    <div style="margin-top: 10px; opacity: 0.8;">일반, 강화 + 0, 속성 없음</div>
+                    <div class="textfield">
+                        <input type="text" placeholder="아이템 이름을 입력하세요." form="tem">
+                        <span class="material-icons-sharp arrow">search</span>
+                    </div>
+                    <div>
+                        <div><input type="submit" class="submit" form="tem" value="전체 조기화"></div>
+                    </div>
+                </div>
+                <div class="namebar">
+                    <span>이  름</span>
+                    <span>이  름</span>
+                </div>
+                <div class="itembar">
+                    <div class="items">
+                        <div class="picture"><img src="./거래소이미지/가이아의분노.JPG" alt="가이아의 분노" width="70px" height="70px"></div>
+                        <div class="textpic" style="display: grid; grid-template-rows: 1fr 1fr;">
+                            <div>가이아의 격로</div>
+                            <div>요정</div>
+                        </div>
+                        <div style="width: 200px; height: 80px;"><button class="marchan">판매목록</button></div>
+                    </div>
+                    <div class="items">
+                        <div class="picture"><img src="./거래소이미지/고대다크엘프의검.JPG" alt="고대다크엘프의검" width="70px" height="70px"></div>
+                        <div class="textpic" style="display: grid; grid-template-rows: 1fr 1fr;">
+                            <div>고대 다크엘프의 검</div>
+                            <div>요정</div>
+                        </div>
+                        <div style="width: 200px; height: 80px;"><button class="marchan">판매목록</button></div>
+                    </div>
+                    <div class="items">
+                        <div class="picture"><img src="./거래소이미지/광풍의도끼.JPG" alt="광풍의도끼" width="70px" height="70px"></div>
+                        <div class="textpic" style="display: grid; grid-template-rows: 1fr 1fr;">
+                            <div>광풍의 도끼</div>
+                            <div>기사/군주</div>
+                        </div>
+                        <div style="width: 200px; height: 80px;"><button class="marchan">판매목록</button></div>
+                    </div>
+                    <div class="items">
+                        <div class="picture"><img src="./거래소이미지/나이트발드의검.JPG" alt="나이트발드의검" width="70px" height="70px"></div>
+                        <div class="textpic" style="display: grid; grid-template-rows: 1fr 1fr;">
+                            <div>나이트발드의 양손검</div>
+                            <div>기사</div>
+                        </div>
+                        <div style="width: 200px; height: 80px;"><button class="marchan">판매목록</button></div>
+                    </div>
+                    <div class="items">
+                        <div class="picture"><img src="./거래소이미지/강철미나의지팡이.JPG" alt="강철미나의지팡이" width="70px" height="70px"></div>
+                        <div class="textpic" style="display: grid; grid-template-rows: 1fr 1fr;">
+                            <div>강철 미나의 지팡이</div>
+                            <div>마법사</div>
+                        </div>
+                        <div style="width: 200px; height: 80px;"><button class="marchan">판매목록</button></div>
+                    </div>
+                    <div class="items">
+                        <div class="picture"><img src="./거래소이미지/광전사의도끼.JPG" alt="광전사의도끼" width="70px" height="70px"></div>
+                        <div class="textpic" style="display: grid; grid-template-rows: 1fr 1fr;">
+                            <div>광전사의 도끼</div>
+                            <div>기사</div>
+                        </div>
+                        <div style="width: 200px; height: 80px;"><button class="marchan">판매목록</button></div>
+                    </div>
+                    <div class="items">
+                        <div class="picture"><img src="./거래소이미지/그라디우스.JPG" alt="그라디우스" width="70px" height="70px"></div>
+                        <div class="textpic" style="display: grid; grid-template-rows: 1fr 1fr;">
+                            <div>그라디우스</div>
+                            <div>기사/요정/마법사/군주</div>
+                        </div>
+                        <div style="width: 200px; height: 80px;"><button class="marchan">판매목록</button></div>
+                    </div>
+                    <div class="items">
+                        <div class="picture"><img src="./거래소이미지/난쟁이족검.JPG" alt="난쟁이족검" width="70px" height="70px"></div>
+                        <div class="textpic" style="display: grid; grid-template-rows: 1fr 1fr;">
+                            <div>난쟁이족 검</div>
+                            <div>기사/요정/마법사/군주</div>
+                        </div>
+                        <div style="width: 200px; height: 80px;"><button class="marchan">판매목록</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./거래소만들기.js"></script>
+</body>
+</html>

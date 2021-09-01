@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            position: relative;
+            z-index: -5;
+        }
+        div{
+            position: relative;
+            margin: auto;
+            z-index: 2;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <canvas id="circle" width="1000" height="600" style="background-color: white">
+        <div style="width: 100px; height: 100px; left: 100px; top: 100px; border: black; background-color: cadetblue;">
+            
+        </div>
+    </canvas>
+
+    <script>
+        
+        const circle = document.getElementById("circle");
+        const canvas = document.querySelector('.circle');
+
+        const circle2 = circle.getContext('2d');
+        const context = circle.getContext('2d');
+   
+        let xPos = 10;
+        let yPos = 50;
+        let count = 0;
+
+        
+        context.arc(xPos, yPos, 30, 0, Math.PI*2, false);
+        context.fill();
+
+        // function draw() {
+        //     // context.clearRect(0, 0, circle.width, circle.height);;
+
+        //     context.beginPath();
+         
+
+          
+        //     context.arc(xPos, yPos, 30, 0, Math.PI*2, false);
+
+        //     context.fill();
+  
+        //     // xPos = xPos + 3;
+        //     if(xPos === 500){
+        //         yPos += 5;
+        //     }else{
+                
+        //         xPos += 5;
+        //     }
+
+        //     requestAnimationFrame(draw)
+        // }
+
+        // draw();
+     
+        
+    </script>
+</body>
+</html>

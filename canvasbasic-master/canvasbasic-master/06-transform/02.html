@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .canvas {
+        background: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Transform</h1>
+    <canvas class="canvas" width="500" height="500"></canvas>
+
+    <script>
+      const canvas = document.querySelector('.canvas');
+      const context = canvas.getContext('2d');
+      let scaleValue = 1;
+      let rotationValue = 0;
+
+      function toRadian(d) {
+        return d * Math.PI/180;
+      }
+
+      function draw() {
+        // context.clearRect(0, 0, canvas.width, canvas.height);
+        context.save(); //translate 즉, 기준점을 저장해두는 것이다!!!! 이따가 기준점을 옮길것이기 떄문!
+        context.setTransform(1,0,0,1,0,0); //변환을 초기화하는것이다 ()
+        // context.resetTransform();
+        context.translate(350, 350); //커질 기준점을 정해주는 것이다(기준점이 0,0 에서 350,350으로 바꾼것이기 때문에 그릴때 조심할것)
+        context.scale(scaleValue, scaleValue);
+        context.rotate(toRadian(rotationValue)); //회전시킨느것
+        context.strokeRect(-50, -50, 100, 100);
+
+        // context.setTransform(1,0,0,1,0,0);
+        // context.fillRect(10, 10, 30, 30);
+        context.restore();
+
+        context.fillRect(10, 10, 30, 30);
+
+        scaleValue += 0.05;
+        rotationValue += 1;
+
+        requestAnimationFrame(draw);
+      }
+
+      draw();
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

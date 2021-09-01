@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        margin: 0;
+      }
+      .canvas {
+        width: 500px;
+        height: 300px;
+        background: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--
+      canvas사이즈를 정할때 캔버스 내에서 사이즈 조절하는 것과
+      css로 크기를 조절하는 것과는 엄연히 다르다
+
+      canvas의 기본크기는 정해져있고,
+      css로 그 해상도를 늘렸다 줄였다 하는것.
+      즉, canvas로 2배 늘려두고,
+      css로 1/2 크기로 줄이면 
+      canvas1배, css1배 한것과 보이는 크기가 같지만
+      위의 것이 해상도가 더 좋은 것이 된다는 것!
+
+      그래서 기본적으로 해상도를 좋게 하기위해 canvas크기를 2배 늘리고, css로 줄이는 방법을 많이 사용한다
+    -->
+    <h1>캔버스 사이즈 설정</h1>
+    <canvas class="canvas" width="500" height="300"></canvas>
+    <canvas class="canvas2" width="1000" height="600"></canvas>
+
+    <script>
+      const canvas = document.querySelector('.canvas');
+      const canvas2 = document.querySelector('.canvas2');
+      const context = canvas.getContext('2d');
+      const context2 = canvas2.getContext('2d');
+
+      context.arc(100, 100, 50, 0, Math.PI*2, false);
+      context2.arc(100, 100, 50, 0, Math.PI*2, false);
+      context.fill();
+      context2.fill();
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

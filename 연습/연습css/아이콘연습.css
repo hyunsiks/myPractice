@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone|Material+Icons+Sharp");
+
+.material-icons{
+    color: red;
+}
+.material-icons-sharp{
+    color: blue;
+}
+.material-icons-two-tone{
+    background-color: darkgoldenrod;
+}

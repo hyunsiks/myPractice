@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/maps/highmaps.js"></script>
+<script src="http://code.highcharts.com/maps/modules/drilldown.js"></script>
+<script src="./chart.js"></script>
+<script type="text/javascript">
+var highMap = new highMaps();
+highMap.init();
+</script>
+<link rel="stylesheet" href="./style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone|Material+Icons+Sharp" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <!-- 메인섹션 -->
+        <section>
+            <div class="main_backgroundImg"></div>
+            <div class="main_container">
+                <nav class="main_navbar">
+                    <div class="main_logo">Travel<span style="color: orangered;">ers</span></div>
+                    <div class="main_menuBar">
+                        <div class="main_topMenu">
+                            <div></div>
+                            <div class="main_icons">
+                                <div class="main_flipedInfo">
+                                    <span class="material-icons-two-tone" style="font-size: 2.5vw;">
+                                        event
+                                    </span>
+                                </div>
+                                <div class="main_flipedInfo">
+                                    <span class="material-icons-two-tone" style="font-size: 2.5vw;">
+                                        location_on
+                                    </span>
+                                </div>
+                                <div class="main_flipedInfo">
+                                    <span class="material-icons-two-tone" style="font-size: 2.5vw;">
+                                        phone_iphone
+                                    </span>
+                                </div>
+                                <div class="main_flipedInfo">
+                                    <span class="material-icons-two-tone" style="font-size: 2.5vw;" id="login_Btn">
+                                        perm_identity
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main_bottomMenu">
+                            <span>전체</span>
+                            <span><a href="https://www.mangoplate.com/">먹기</a></span>
+                            <span><a href="https://www.starbucks.co.kr/index.do">마시기</a></span>
+                            <span><a href="https://www.everland.com/web/intro.html">놀기</a></span>
+                            <span><a href="https://gil.seoul.go.kr/walk/main.jsp">걷기</a></span>
+                            <span><a href="http://ticket.interpark.com/Contents/Ranking?smid1=s_menu&smid2=performance">보기</a></span>
+                        </div>
+                    </div>
+                </nav>
+    
+                <!-- 검색섹션 -->
+                <div class="main_mainBar">
+                    <div id="main_content">
+                        <div class="main_travel">
+                            Travel<span style="color: orangered;">ers</span>
+                        </div>
+                        <div class="main_writing">
+                            <div>여행 일자, 숙소, 가고 싶은 장소만
+                                선택하면 일정이 자동으로 완성되는
+                                쉽고 간편한 여행 일정 플래너</div>
+                            <div class="main_start">시작하기</div>
+                        </div>
+                    </div>
+                    <div id="main_map"></div>
+                    <div></div>
+                </div>
+                <footer></footer>
+            </div>
+        </section>
+        
+        <section>    
+            <div>여행지</div>
+            <div>여행지를 직접 검색하시거나 목록에서 선택해주세요.</div>
+            <div>
+                <input type="text" value="어디로 여행을 떠나시나요?">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div></div>
+        </section>
+
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>

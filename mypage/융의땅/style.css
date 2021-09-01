@@ -1,0 +1,15 @@
+#canvasContainer{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    width: 800px;
+    height: 900px;
+    border: darkblue 2px solid;
+}
+#canvasRazer{
+    position: absolute;
+    width: 800px;
+    height: 900px;
+    /* background-color: rgba(19, 19, 19, 0.842); */
+    background-color: rgb(46, 46, 46);
+}

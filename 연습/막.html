@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          margin: 0;
+        }
+        .canvas {
+          background: #eee;
+        }
+        .but{
+            width: 50px;
+            height: 30px;
+            border-radius: 50%;
+        }
+      </style>
+</head>
+
+<body>
+    
+    <canvas id="canvas" class="canvas" width="1000" height="700"></canvas>
+    <div class = "buttons">
+        <button class='but' type-color="black" style="background-color: black;"></button>
+        <button class='but' type-color="red" style="background-color: red;"></button>
+    </div>
+    <canvas id="canvas2" class="canvas2" width="1000" height="700"></canvas>
+    <script>
+
+        const getbutton = document.querySelector('.buttons');
+
+        const canvas = document.querySelector('canvas');
+        const canvas2 = document.getElementById('canvas2');
+        const con = canvas.getContext('2d');
+        const con2 = canvas2.getContext('2d');
+        let bursh;
+
+        
+        
+        function checkcolor(e){
+            brush = e
+        }
+        
+        document.querySelector('.buttons').addEventListener("click", function(e){
+            brush = e.target.getAttribute('type-color');
+            con.fillStyle = brush;
+            
+            console.log(brush);
+        })
+
+        let start = 0;
+
+        canvas.addEventListener('mousemove', function(e){
+           if(start == 1){
+              
+                con.beginPath();
+                con.arc(e.pageX,e.pageY,10,0,Math.PI*2,false);
+                con.fill();
+           }
+        })
+        canvas.addEventListener('mousedown', function(e){
+           
+          
+           con.beginPath();
+           con.arc(e.pageX,e.pageY,10,0,Math.PI*2,false);
+           con.fill();
+           start = 1;
+       })
+       canvas.addEventListener('mouseup', function(e){
+           
+           start = 0;
+       })
+
+       let locatex = 50;
+       let locatey = 50;
+       
+       function draw(){
+           
+
+        if(locate == canvas2.width - 100){
+            con2.clearRect(0,0,canvas2.width, canvas2.height);
+           con2.beginPath();
+           con2.arc(locatex, locatey, 30, 0, Math.PI*2, false);
+           con2.fill();
+           locatey += 5;
+        }else{
+            con2.clearRect(0,0,canvas2.width, canvas2.height);
+            
+            con2.beginPath();
+            con2.arc(locate, 50, 30, 0, Math.PI*2, false);
+            con2.fill();
+            locatex += 5;
+
+        }
+
+
+        requestAnimationFrame(draw);
+       }
+       draw();
+       
+    </script>
+</body>
+</html>

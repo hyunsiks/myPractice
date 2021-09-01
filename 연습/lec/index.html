@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./boxes.css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarouse12/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/afax/libs/OwlCarouse12/2.3.4/assets/owl.carousel.min.css"/> -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a gref="#">Portfo<span>lio.</span></a></div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>                
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Hello, my name is</div>
+                <div class="text-2">Kim hyun sik</div>
+                <div class="text-3">And I'm a <span>Programmer</span></div>
+                <a href="#">Hire me</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">About me</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="images/pen.jpg" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">I'm Kim hyun sik and I'm a <span>Programmer</span></div>
+                    <p>발전하는 웹개발자</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="frame2Topbar">
+            <div class="birds"><canvas id="birdCanvas"width="1000px" height="800px"></canvas></div>
+            <div class="frame2Main"></div>
+        </div>
+        <div class="flyingbox">
+            <div class="cube flying">
+                <div class="topbox"></div>
+                <div class="bottombox"></div>
+                <div class="frontbox"></div>
+                <div class="backbox"></div>
+                <div class="rightbox"></div>
+                <div class="leftbox"></div>
+            </div>
+            <div class="cube2 flying">
+                <div class="topbox"></div>
+                <div class="bottombox"></div>
+                <div class="frontbox"></div>
+                <div class="backbox"></div>
+                <div class="rightbox"></div>
+                <div class="leftbox"></div>
+            </div>
+            <div class="cube3 flying">
+                <div class="topbox"></div>
+                <div class="bottombox"></div>
+                <div class="frontbox"></div>
+                <div class="backbox"></div>
+                <div class="rightbox"></div>
+                <div class="leftbox"></div>
+            </div>
+            <div class="cube4 flying">
+                <div class="topbox"></div>
+                <div class="bottombox"></div>
+                <div class="frontbox"></div>
+                <div class="backbox"></div>
+                <div class="rightbox"></div>
+                <div class="leftbox"></div>
+            </div>
+            <div class="cube5 flying">
+                <div class="topbox"></div>
+                <div class="bottombox"></div>
+                <div class="frontbox"></div>
+                <div class="backbox"></div>
+                <div class="rightbox"></div>
+                <div class="leftbox"></div>
+            </div>
+            <div class="cube6 flying">
+                <div class="topbox"></div>
+                <div class="bottombox"></div>
+                <div class="frontbox"></div>
+                <div class="backbox"></div>
+                <div class="rightbox"></div>
+                <div class="leftbox"></div>
+            </div>
+            <div class="cube7 flying">
+                <div class="topbox"></div>
+                <div class="bottombox"></div>
+                <div class="frontbox"></div>
+                <div class="backbox"></div>
+                <div class="rightbox"></div>
+                <div class="leftbox"></div>
+            </div>
+        </div>
+        <div id="landBox"></div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Hello</div>
+                    <p></p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Eun Chang</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Seoul</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">dmsckd0112@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Message me</div>
+                    <form action="#">
+                        <div class="field">
+                            <div class="field name">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            
+                        </div>
+                        <div class="field">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" placehoder="Describe project.."></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+    <script src="boxes.js"></script>
+</body>
+</html>

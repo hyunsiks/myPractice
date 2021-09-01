@@ -1,0 +1,81 @@
+#centerbody{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+}   
+
+#top{
+    display: flex;
+    flex-direction: row;
+    width: 980px;
+}
+.topbar{
+    width: 100px;
+    height: 30px;
+    border: black solid 2px;
+    font-size: 10px;
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cultureplex{
+    
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-color: red;
+    border-width: 10px;
+    background-color: ivory;
+    width: 960px;
+    height: 150px;
+}
+
+.cultureplex > *{
+  
+    margin-top: 50px;
+
+}
+
+#cgvlogo{
+    margin-left: 30px;
+}
+#culture{
+
+    margin-left: 100px;
+}
+
+.culturemenu{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+}
+.culturemenu > *{
+    margin-left: 20px;
+    margin-top: 20px;
+    border-color: black;
+    border-style: solid;
+    background-color: yellow;
+    border-radius: 10%;
+}
+.hr-sect {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: black;
+    font-size: 12px;
+    margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+    content: "";
+    flex-grow: 1;
+    background: black;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 16px;
+}

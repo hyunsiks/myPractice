@@ -1,0 +1,214 @@
+*{
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+    transition: transform 0.7s;
+
+    width: 500vw;
+    height: 100vh;
+    
+}
+
+#canvasRainbow{
+    width: 100%;
+    height: 100%;
+    /* background-color: black; */
+   
+}
+#canvas{
+    pointer-events: none;
+}
+
+.frames{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#blackFrame{
+    background-color: gray;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#blueFrame{
+    background-color: blue;
+}
+
+#greenFrame{
+    background-color: green;
+}
+
+#orangeFrame{
+    background-color: orange;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#orangeFrame{
+    background-color: yellow;
+}
+
+canvas{
+    width: 100%;
+    height: 100%;
+}
+
+#sun{
+    z-index: -1;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    background-color: yellow;
+    transition: 4s;
+}
+
+.flipped #sun{
+    background-color: turquoise;
+}
+
+.reds #sun{
+    background-color: black;
+}
+
+.flyingbox{
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    perspective: 400px;
+}
+.flyingbox > *{
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+}
+#bluebox{
+    transform: rotateY(50deg);
+    transform: rotateX(50deg);
+    transform: rotateZ(50deg);
+}
+#redbox{
+    transform: rotateY(-50deg);
+}
+
+#verticalFrame2{
+    display: flex;
+    justify-content: center; /*세로정렬*/
+    align-items: center; /*가로정렬*/
+}
+
+.box{ 
+    /* z-index: 1; */
+    width:100vw; 
+    height:100vh; 
+    position:relative; 
+    color:#ffffff; 
+    font-size:24pt;
+    /* background-color: rgba(100, 100, 100, 0); */
+}
+
+
+
+#nextBtn{
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    z-index: 5;
+}
+#prevBtn{
+    position: fixed;
+    left: 100px;
+    top: 10px;
+    z-index: 5;
+}
+
+#verticalFrame3{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    background: #070716;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#drag, #spin{
+    position: relative;
+    display: flex;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg);
+}
+
+#drag img{
+    transform-style: preserve-3d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 50%;
+
+    user-select: none;
+
+    box-shadow: 0 0 8px #fff;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+}
+
+#drag img:hover{
+    box-shadow: 0 0 15px #fffd;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+}
+
+#ground{
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+}
+
+@keyframes spin{
+    from{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes spinRevert{
+    from{
+        transform: rotateY(360deg);
+    }to{
+        transform: rotateY(0deg);
+    }
+}
